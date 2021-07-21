@@ -8,142 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@600&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
     <title>Hackathon</title>
     <div class="header-cont">
-        <span id="headername"><b>Name</b></span>
-        <span id="headername2"><b>About</b></span>
+        <span id="headername"><b>Home</b></span>
+        <a href="about.html" id="headername2"><b>About</b></a></span>
     </div>
     <div class="imgcont">
         <img src="bact.jpg" id="head-img">
         <div class="textheader">
             <div style="display: inline;">
-                <h1>Title<br><span id="tagline">about sdfsdfdssdfasdfsdfeasdf<br>sdfsdfsdfasdfsdfsdfadfsda<br>sdfsdfsdfdsffsdfsd</span></h1>
+                <h1>Title<br><span id="tagline"> A Platform for better screening of polyphenols acting against bacterial pathogens.</span></h1>
             </div>
             <div class="btn-cont">
                 <a href="questions.html"><span></span><b>Questions</b></a>
             </div>
         </div>
 </head>
-    
-<body>
-    <script>
-	function result() {
-    var blist = {
-        ecoli: {
-            CGA: "Yes",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "Yes",
-            ALOEVERA: "Yes",
-            OLIVELEAFEXTRACTS: "Yes",
-            HOLYBASIL: "Yes",
-            GARLIC: "No",
-            CATECHIN: "Yes",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        klebsiellaspp: {
-            CGA: "Yes",
-            GRAPESM: "No",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "No",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "Yes",
-            GARLIC: "Yes",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        pseudomonasaeruginosa: {
-            CGA: "No",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "Yes",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "Yes",
-            GARLIC: "Yes",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        enterococcusspp: {
-            CGA: "No",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "No",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "No",
-            GARLIC: "No",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        proteusspp: {
-            CGA: "No",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "No",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "Yes",
-            GARLIC: "Yes",
-            CATECHIN: "Yes",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        enterobacterspp: {
-            CGA: "No",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "No",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "No",
-            GARLIC: "No",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "No",
-            EPICATECHIN: "No"
-        },
-        staphylococcus: {
-            CGA: "No",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "Yes",
-            ALOEVERA: "Yes",
-            OLIVELEAFEXTRACTS: "Yes",
-            HOLYBASIL: "No",
-            GARLIC: "No",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        acinobacterspp: {
-            CGA: "No",
-            GRAPESM: "No",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "No",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "No",
-            GARLIC: "Yes",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "No",
-            EPICATECHIN: "Yes"
-        }
-    }
-
-    var bactname = document.getElementById('bactname1').value;
-    console.log(bactname);
-    var input = bactname.toLowerCase();
-    var definition = blist[input];
-    var output = document.getElementById("output");
-    if (definition == undefined) {
-        output.innerHTML = `<hr> There is no such bacteria! <hr>`;
-    } else {
-        output.innerHTML = `<hr> C GA : ${definition.CGA} <hr> GRAPE SM : ${definition.GRAPESM} <hr> TEA PHENOLICS : ${definition.TEAPHENOLICS}
-        <hr> ALOE VERA : ${definition.ALOEVERA} <hr> OLIVE LEAF EXTRACTS : ${definition.OLIVELEAFEXTRACTS}
-         <hr> HOLY BASIL : ${definition.HOLYBASIL} <hr> GARLIC : ${definition.GARLIC} <hr> CATECHIN : ${definition.CATECHIN}
-         <hr> EPIGALLOCATECHIN-3-GALLATE (Green Tea) : ${definition.EPIGALLOCATECH}
-         <hr> EPICATECHIN WITH THEOFLAVIN : ${definition.EPICATECHIN} <hr>`;
-    }
-}
-</script>
-    </body>
 
 
 </html>
