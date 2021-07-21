@@ -40,7 +40,8 @@
 }
 
 #tagline {
-    font-size: 30px;
+    font-size: 20px;
+    margin-top: 400px;
     color: #5c7eb6;
 }
 
@@ -249,4 +250,15 @@ input[type=submit] span {
 
 form p {
     color: white;
+}
+
+#tit {
+    padding-top: 20px;
+    font-size: 40px;
+}
+
+#temp {
+    font-size: 40px;
+    color: black;
+    padding-top: 20px;
 }
