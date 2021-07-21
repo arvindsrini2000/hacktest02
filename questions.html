@@ -5,11 +5,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@600&display=swap" rel="stylesheet">
-    <script src="index12.js"></script>
     <title>Questions</title>
     <div class="header-cont">
-        <span id="headername">Name</span>
-        <span id="headername2">About</span>
+        <a href="index.html" id="headername">Home</a>
+        <a href=about.html id="headername2">About</a>
     </div>
 </head>
 
@@ -17,131 +16,86 @@
     <img src="bact.jpg" id="head-img">
     <div class="body-cont">
         <form action="post" id="form" name="ques">
-            <div id="textbox">
-                <span id="bactname">What kind of bacteria are you infected with?</span>
-            </div>
-            <input type="text" placeholder="Type here" id="bactname1" name="fq"><br><br>
+            <p> Please select "Yes" or "No" on corresponding bacteria!</p>
+            <br>
+            <p>E-Coli:</p>
+            <input type="radio" id="yes" name="yn1" value="Yes"><label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="yn1" value="No"><label for="no">No</label><br>
+            <br>
+            <p>Klebsiella spp.:</p>
+            <input type="radio" id="yes1" name="yn2" value="Yes"><label for="yes1">Yes</label><br>
+            <input type="radio" id="no1" name="yn2" value="No"><label for="no1">No</label><br>
+            <br>
+            <p>Pseudomonas aeruginosa:</p>
+            <input type="radio" id="yes2" name="yn3" value="Yes"><label for="yes2">Yes</label><br>
+            <input type="radio" id="no2" name="yn3" value="No"><label for="no2">No</label><br>
+            <br>
+            <p>Enterococcus spp.:</p>
+            <input type="radio" id="yes3" name="yn4" value="Yes"><label for="yes3">Yes</label><br>
+            <input type="radio" id="no3" name="yn4" value="No"><label for="no3">No</label><br>
+            <br>
+            <p>Proteus spp.:</p>
+            <input type="radio" id="yes4" name="yn5" value="Yes"><label for="yes4">Yes</label><br>
+            <input type="radio" id="no4" name="yn5" value="No"><label for="no4">No</label><br>
+            <br>
+            <p>Enterobacter spp.:</p>
+            <input type="radio" id="yes5" name="yn6" value="Yes"><label for="yes5">Yes</label><br>
+            <input type="radio" id="no5" name="yn6" value="No"><label for="no5">No</label><br>
+            <br>
+            <p>Staphylococcus:</p>
+            <input type="radio" id="yes6" name="yn7" value="Yes"><label for="yes6">Yes</label><br>
+            <input type="radio" id="no6" name="yn7" value="No"><label for="no6">No</label><br>
+            <br>
+            <p>Acinobacter spp.:</p>
+            <input type="radio" id="yes7" name="yn8" value="Yes"><label for="yes7">Yes</label><br>
+            <input type="radio" id="no7" name="yn8" value="No"><label for="no7">No</label><br>
+            <br>
+
             <button type="button" class="btn btn-primary" id="qbtn" onclick="result()">Submit</button>
             <p id="output"></p>
         </form>
     </div>
-	<script>
-	function result() {
-    var blist = {
-        ecoli: {
-            CGA: "Yes",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "Yes",
-            ALOEVERA: "Yes",
-            OLIVELEAFEXTRACTS: "Yes",
-            HOLYBASIL: "Yes",
-            GARLIC: "No",
-            CATECHIN: "Yes",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        klebsiellaspp: {
-            CGA: "Yes",
-            GRAPESM: "No",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "No",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "Yes",
-            GARLIC: "Yes",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        pseudomonasaeruginosa: {
-            CGA: "No",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "Yes",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "Yes",
-            GARLIC: "Yes",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        enterococcusspp: {
-            CGA: "No",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "No",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "No",
-            GARLIC: "No",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        proteusspp: {
-            CGA: "No",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "No",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "Yes",
-            GARLIC: "Yes",
-            CATECHIN: "Yes",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        enterobacterspp: {
-            CGA: "No",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "No",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "No",
-            GARLIC: "No",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "No",
-            EPICATECHIN: "No"
-        },
-        staphylococcus: {
-            CGA: "No",
-            GRAPESM: "Yes",
-            TEAPHENOLICS: "Yes",
-            ALOEVERA: "Yes",
-            OLIVELEAFEXTRACTS: "Yes",
-            HOLYBASIL: "No",
-            GARLIC: "No",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "Yes",
-            EPICATECHIN: "No"
-        },
-        acinobacterspp: {
-            CGA: "No",
-            GRAPESM: "No",
-            TEAPHENOLICS: "No",
-            ALOEVERA: "No",
-            OLIVELEAFEXTRACTS: "No",
-            HOLYBASIL: "No",
-            GARLIC: "Yes",
-            CATECHIN: "No",
-            EPIGALLOCATECH: "No",
-            EPICATECHIN: "Yes"
+    <script>
+        function result() {
+            var getSelectedValue = document.querySelector('input[name="yn1"]:checked');
+            var y1 = getSelectedValue.value;
+            var getSelectedValue2 = document.querySelector('input[name="yn2"]:checked');
+            var y2 = getSelectedValue2.value;
+            var getSelectedValue3 = document.querySelector('input[name="yn3"]:checked');
+            var y3 = getSelectedValue3.value;
+            var getSelectedValue4 = document.querySelector('input[name="yn4"]:checked');
+            var y4 = getSelectedValue4.value;
+            var getSelectedValue5 = document.querySelector('input[name="yn5"]:checked');
+            var y5 = getSelectedValue5.value;
+            var getSelectedValue6 = document.querySelector('input[name="yn6"]:checked');
+            var y6 = getSelectedValue6.value;
+            var getSelectedValue7 = document.querySelector('input[name="yn7"]:checked');
+            var y7 = getSelectedValue7.value;
+            var getSelectedValue8 = document.querySelector('input[name="yn8"]:checked');
+            var y8 = getSelectedValue8.value;
+            if (y1 == "Yes" && y2 == "Yes" && y3 == "No" && y4 == "No" && y5 == "No" && y6 == "No" && y7 == "No" && y8 == "No") {
+                window.alert("You can use Chlorogenice!");
+            } else if (y1 == "Yes" && y2 == "No" && y3 == "Yes" && y4 == "Yes" && y5 == "Yes" && y6 == "Yes" && y7 == "Yes" && y8 == "No") {
+                window.alert("You can use Naringin!");
+            } else if (y1 == "Yes" && y2 == "No" && y3 == "Yes" && y4 == "No" && y5 == "No" && y6 == "No" && y7 == "Yes" && y8 == "No") {
+                window.alert("You can use Anthraquinone!");
+            } else if (y1 == "Yes" && y2 == "No" && y3 == "No" && y4 == "No" && y5 == "No" && y6 == "No" && y7 == "Yes" && y8 == "No") {
+                window.alert("You can use Rutin!");
+            } else if (y1 == "Yes" && y2 == "Yes" && y3 == "Yes" && y4 == "No" && y5 == "Yes" && y6 == "No" && y7 == "No" && y8 == "No") {
+                window.alert("You can use Holy Basil(O.sanctum Apigenin!");
+            } else if (y1 == "No" && y2 == "Yes" && y3 == "Yes" && y4 == "No" && y5 == "Yes" && y6 == "No" && y7 == "No" && y8 == "Yes") {
+                window.alert("You can use Allicin!");
+            } else if (y1 == "Yes" && y2 == "No" && y3 == "No" && y4 == "No" && y5 == "Yes" && y6 == "No" && y7 == "No" && y8 == "No") {
+                window.alert("You can use Catechin!");
+            } else if (y1 == "Yes" && y2 == "Yes" && y3 == "Yes" && y4 == "Yes" && y5 == "Yes" && y6 == "No" && y7 == "Yes" && y8 == "No") {
+                window.alert("You can use Epigallocatech in-3-gallate!");
+            } else if (y1 == "No" && y2 == "No" && y3 == "No" && y4 == "No" && y5 == "No" && y6 == "No" && y7 == "No" && y8 == "Yes") {
+                window.alert("You can use Epicatechin with Theoflavin!");
+            } else if (y1 == "Yes" && y2 == "Yes" && y3 == "Yes" && y4 == "Yes" && y5 == "Yes" && y6 == "Yes" && y7 == "Yes" && y8 == "Yes") {
+                window.alert("Probable compound not available!");
+            } else window.alert("Probable compound not available!");
         }
-    }
-
-    var bactname = document.getElementById('bactname1').value;
-    console.log(bactname);
-    var input = bactname.toLowerCase();
-    var definition = blist[input];
-    var output = document.getElementById("output");
-    if (definition == undefined) {
-        output.innerHTML = `<hr> There is no such bacteria! <hr>`;
-    } else {
-        output.innerHTML = `<hr> C GA : ${definition.CGA} <hr> GRAPE SM : ${definition.GRAPESM} <hr> TEA PHENOLICS : ${definition.TEAPHENOLICS}
-        <hr> ALOE VERA : ${definition.ALOEVERA} <hr> OLIVE LEAF EXTRACTS : ${definition.OLIVELEAFEXTRACTS}
-         <hr> HOLY BASIL : ${definition.HOLYBASIL} <hr> GARLIC : ${definition.GARLIC} <hr> CATECHIN : ${definition.CATECHIN}
-         <hr> EPIGALLOCATECHIN-3-GALLATE (Green Tea) : ${definition.EPIGALLOCATECH}
-         <hr> EPICATECHIN WITH THEOFLAVIN : ${definition.EPICATECHIN} <hr>`;
-    }
-}
-</script>
+    </script>
 </body>
 
 </html>
